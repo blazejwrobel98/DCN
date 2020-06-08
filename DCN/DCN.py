@@ -3,10 +3,6 @@ import os
 
 while True:
     try:
-        os.system('cls')    # For Windows
-    except:
-        continue
-    try:
         os.system('clear')  # For Linux/OS X
     except:
         continue
