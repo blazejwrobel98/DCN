@@ -18,31 +18,24 @@ while True:
             break
         elif option == 1:
             try:
-                repository.Install()
-            except:
-                repository.Error("Install")
-                os.system("PAUSE")
-                continue
-        elif option == 2:
-            try:
                 repository.StartUpdate()
             except:
                 repository.Error("StartUpdate")
                 os.system("PAUSE")
                 continue
-        elif option == 3:
+        elif option == 2:
             try:
                 repository.StopUpdate()
             except:
                 repository.Error("StopUpdate")
                 os.system("PAUSE")
-        elif option == 4:
-            try:
+        elif option == 3:
+             try:
                 repository.Update()
-            except:
+             except:
                 repository.Error("Update")
                 os.system("PAUSE")
-        elif option == 5:
+        elif option == 4:
             try:
                 repository.Statistics()
             except:

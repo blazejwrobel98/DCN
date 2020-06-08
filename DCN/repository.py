@@ -1,6 +1,6 @@
 
 def GlobalMenu():
-    options = ["Instalacja aplikacji","Start Update","Stop Update","Aktualizacja","Statystyki","Wyjście"]
+    options = ["Start Update","Stop Update","Aktualizacja","Statystyki","Wyjście"]
     o = 0
     for i in range(len(options)):
         if options[i] =="Wyjście":
@@ -11,3 +11,9 @@ def GlobalMenu():
         
 def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')
+
+def StartUpdate():
+    stream = os.popen('screen -S update')
+    output = stream.read()
+    str(output)
+    match = '(running)'
