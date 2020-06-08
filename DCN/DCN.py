@@ -21,27 +21,27 @@ while True:
                 repository.StartUpdate()
             except:
                 repository.Error("StartUpdate")
-                os.system("PAUSE")
+                input("Wciśnij dowolny przycisk aby kontynuować . . .")
                 continue
         elif option == 2:
             try:
                 repository.StopUpdate()
             except:
                 repository.Error("StopUpdate")
-                os.system("PAUSE")
+                input("Wciśnij dowolny przycisk aby kontynuować . . .")
         elif option == 3:
              try:
                 repository.Update()
              except:
                 repository.Error("Update")
-                os.system("PAUSE")
+                input("Wciśnij dowolny przycisk aby kontynuować . . .")
         elif option == 4:
             try:
                 repository.Statistics()
             except:
                 repository.Error("Statistics")
-                os.system("PAUSE")
+                input("Wciśnij dowolny przycisk aby kontynuować . . .")
     except:
         print("Nie wybrano żadnej z dostępnych opcji, spróbuj jeszcze raz")
-        os.system("PAUSE")
+        input("Wciśnij dowolny przycisk aby kontynuować . . .")
         continue
