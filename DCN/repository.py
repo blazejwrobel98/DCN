@@ -1,3 +1,4 @@
+import os
 
 def GlobalMenu():
     options = ["Start Update","Stop Update","Aktualizacja","Statystyki","Wyjście"]
