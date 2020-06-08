@@ -14,6 +14,7 @@ def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')
 
 def StartUpdate():
-    stream = os.popen('ls')
+    stream = os.popen('screen -S update')
     output = stream.read()
-    print (output)
+    print(output)
+    input()
