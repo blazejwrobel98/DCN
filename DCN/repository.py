@@ -13,7 +13,6 @@ def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')
 
 def StartUpdate():
-    stream = os.popen('screen -S update')
+    stream = os.popen('ls')
     output = stream.read()
-    str(output)
-    match = '(running)'
+    print (output)
