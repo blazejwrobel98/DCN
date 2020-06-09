@@ -15,6 +15,7 @@ def Error(fun):
 
 def StartUpdate():
     stream = os.popen('screen -S update')
+    stream = os.popen('ls-al')
     output = stream.read()
     print(output)
     input()
