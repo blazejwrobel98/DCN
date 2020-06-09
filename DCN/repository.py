@@ -14,8 +14,13 @@ def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')
 
 def StartUpdate():
-    stream = os.popen('screen -S update')
-    stream = os.popen('ls-al')
-    output = stream.read()
-    print(output)
-    input()
+    try:
+        os.popen('screen -dm bash -c "python3.8 run.py')
+        line = os.popen('screen -ls | grep update')
+        output=line.read()
+        str(output)
+        match = "update"
+        if (match in output):
+            print('Pomyślnie uruchomiono usługę Update')
+    except:
+        print('Wystąpił błąd podczas uruchamiania usługi Update')
