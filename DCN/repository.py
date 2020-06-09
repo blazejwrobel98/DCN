@@ -14,7 +14,6 @@ def Wait():
         
 def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')
-    Wait()
 
 def StartUpdate():
     try:
