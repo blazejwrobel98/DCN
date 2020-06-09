@@ -24,6 +24,7 @@ def StartUpdate():
         match = "update"
         if (match in output):
             print('Pomyślnie uruchomiono usługę Update')
+        Wait()
     except:
         print('Wystąpił błąd podczas uruchamiania usługi Update')
 
