@@ -14,6 +14,7 @@ def Wait():
         
 def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')
+    Wait()
 
 def StartUpdate():
     try:
@@ -27,13 +28,14 @@ def StartUpdate():
         Wait()
     except:
         print('Wystąpił błąd podczas uruchamiania usługi Update')
+        Wait()
 
 def StopUpdate():
     try:
-        line = os.popen('screen -ls | grep update')
-        output = line.read()
-        str(output)
-        print(output)
+        os.popen('pkill screen')
+        print('Pomyślnie zakończono proces Update')
+        Wait()
     except:
         print('Wystąpił błąd podczas zatrzymywania Update')
+        Wait()
         

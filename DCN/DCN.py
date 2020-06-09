@@ -24,20 +24,20 @@ while True:
                 repository.StopUpdate()
             except:
                 repository.Error("StopUpdate")
-                input("Wciśnij dowolny przycisk aby kontynuować . . .")
+                repository.Wait()
         elif option == 3:
              try:
                 repository.Update()
              except:
                 repository.Error("Update")
-                input("Wciśnij dowolny przycisk aby kontynuować . . .")
+                repository.Wait()
         elif option == 4:
             try:
                 repository.Statistics()
             except:
                 repository.Error("Statistics")
-                input("Wciśnij dowolny przycisk aby kontynuować . . .")
+                repository.Wait()
     except:
         print("Nie wybrano żadnej z dostępnych opcji, spróbuj jeszcze raz")
-        input("Wciśnij dowolny przycisk aby kontynuować . . .")
+        repository.Wait()
         continue
