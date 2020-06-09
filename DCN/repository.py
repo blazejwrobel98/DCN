@@ -31,4 +31,6 @@ def StopUpdate():
         output = line.read()
         str(output)
         print(output)
+    except:
+        print('Wystąpił błąd podczas zatrzymywania Update')
         
