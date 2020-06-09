@@ -9,6 +9,8 @@ def GlobalMenu():
         else:
             o+=1
             print(f'[{o}] {options[i]}')
+def Wait():
+    input("Wciśnij dowolny przycisk aby kontynuować . . .")
         
 def Error(fun):
     print(f'Wystąpił błąd podczas wywoływania funkcji: {fun}')

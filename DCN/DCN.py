@@ -17,7 +17,7 @@ while True:
                 repository.StartUpdate()
             except:
                 repository.Error("StartUpdate")
-                input("Wciśnij dowolny przycisk aby kontynuować . . .")
+                repository.Wait()
                 continue
         elif option == 2:
             try:
