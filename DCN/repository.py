@@ -15,12 +15,20 @@ def Error(fun):
 
 def StartUpdate():
     try:
-        os.popen('screen -dm bash -c "python3.8 run.py')
+        os.popen('screen -S update -dm bash -c "python3.8 DCN.py"')
         line = os.popen('screen -ls | grep update')
-        output=line.read()
+        output = line.read()
         str(output)
         match = "update"
         if (match in output):
             print('Pomyślnie uruchomiono usługę Update')
     except:
         print('Wystąpił błąd podczas uruchamiania usługi Update')
+
+def StopUpdate():
+    try:
+        line = os.popen('screen -ls | grep update')
+        output = line.read()
+        str(output)
+        print(output)
+        
