@@ -37,6 +37,12 @@ while True:
             except:
                 repository.Error("Statistics")
                 repository.Wait()
+        elif option == "DEBUG":
+            try:
+                repository.DebugMenu()
+            except:
+                repository.Error("Debug")
+                repository.Wait()
     except:
         print("Nie wybrano żadnej z dostępnych opcji, spróbuj jeszcze raz")
         repository.Wait()
