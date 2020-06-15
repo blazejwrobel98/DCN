@@ -8,11 +8,11 @@ while True:
         continue
     repository.GlobalMenu()
     try:
-        option = input()
+        option = int(input())
         if option == 0:
             print("Zamykanie Menu")
             break
-        elif int(option) == 1:
+        elif option == 1:
             try:
                 repository.StartUpdate()
             except:
@@ -37,7 +37,7 @@ while True:
             except:
                 repository.Error("Statistics")
                 repository.Wait()
-        elif option == "debug":
+        elif option == 999:
             try:
                 repository.DebugMenu()
             except:
